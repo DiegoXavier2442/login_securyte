@@ -47,8 +47,17 @@
   
  // $registro -> ctrRegistro();
 
- $registro = controladorFormularios::ctrRegistro();
+ $registro = ControladorFormularios::ctrRegistro();
+
  if($registro=="ok"){
+
+// limpiar el storage, el almacenamiento que esta teniendo el navegador 
+
+      echo '<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+    </script>';
 
   
 
