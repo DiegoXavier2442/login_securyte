@@ -1,4 +1,22 @@
 <?php
+
+if(!isset($_SESSION["validarIngreso"])){
+echo '<script>window.location = "index.php?pagina=ingreso";</script>';
+    return;
+
+
+
+}else{
+  
+    if($_SESSION["validarIngreso"] != "ok") {
+
+
+    echo '<script>window.location = "index.php?pagina=ingreso";</script>';
+    return;
+    }
+
+}
+
 // objeto que le hace una peticion al controlador 
 $usuarios = ControladorFormularios::ctrSelecionarRegistros();
 
