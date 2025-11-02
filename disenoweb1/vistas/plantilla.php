@@ -16,7 +16,7 @@
 </div>
 
 <!--=====================================
-BOTONERA
+BOTONERA GET 
 ======================================-->
 
 <div class="container-fluid  bg-light">
@@ -120,7 +120,8 @@ BOTONERA
     <div class="container py-5">
 
 <?php 
-
+// lista blanca y pagina 404= son aquellas paginas que permito pasar a traves de una url 
+// ATAQUE DE INYECCION SQL A TRAVES DE URL 
 if (isset($_GET["pagina"])){
     if($_GET["pagina"]=="registro" ||
      $_GET["pagina"]=="ingreso" ||
@@ -130,11 +131,15 @@ if (isset($_GET["pagina"])){
 
    include "paginas/". $_GET["pagina"].".php";
 
+    }else{
+        include "paginas/error404.php";
+
     }
 
 
 }else{
     include "paginas/registro.php";
+
 }
 
 
