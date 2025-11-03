@@ -47,12 +47,32 @@ $usuarios = ControladorFormularios::ctrSelecionarRegistros(null,null);
       <td><?php echo $value["fecha_registro"];?></td>
       <td>
         <div class="btn-group">
+          <div class ="px-1">
           <a href="index.php?pagina=editar&id_usuario=<?php echo $value["id_usuario"];?>"class="btn btn-warning">
             <i class="fas fa-pencil-alt"></i>
           </a>
-          <button class="btn btn-danger">
+          </div>
+          <form method ="post">
+
+          <input type="hidden" value="<?php echo $value["id_usuario"];?>" name ="eliminarRegistro">
+
+
+          <button type = "submit " class="btn btn-danger">
             <i class="fas fa-trash-alt"></i>
           </button>
+          <?php
+
+          $eliminar = new ControladorFormularios();
+          $eliminar -> ctrEliminarRegistro();
+
+
+          
+          
+          
+          ?>
+
+          </form>
+          
         </div>
       </td>
     </tr>
