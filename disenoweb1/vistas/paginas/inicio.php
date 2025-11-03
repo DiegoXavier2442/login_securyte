@@ -18,7 +18,9 @@ echo '<script>window.location = "index.php?pagina=ingreso";</script>';
 }
 
 // objeto que le hace una peticion al controlador 
-$usuarios = ControladorFormularios::ctrSelecionarRegistros();
+$usuarios = ControladorFormularios::ctrSelecionarRegistros(null,null);
+
+ 
 
 ?>
 
@@ -45,9 +47,9 @@ $usuarios = ControladorFormularios::ctrSelecionarRegistros();
       <td><?php echo $value["fecha_registro"];?></td>
       <td>
         <div class="btn-group">
-          <button class="btn btn-warning">
+          <a href="index.php?pagina=editar&id_usuario=<?php echo $value["id_usuario"];?>"class="btn btn-warning">
             <i class="fas fa-pencil-alt"></i>
-          </button>
+          </a>
           <button class="btn btn-danger">
             <i class="fas fa-trash-alt"></i>
           </button>
