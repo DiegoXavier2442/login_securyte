@@ -130,6 +130,8 @@ BOTONERA GET
 <?php 
 // lista blanca y pagina 404= son aquellas paginas que permito pasar a traves de una url 
 // ATAQUE DE INYECCION SQL A TRAVES DE URL 
+// ATAQUE CODE INJECTION: PERMITE AL ATACANTE INJECTAR CODIGO FUENTE EN LA 
+//APLICACION DE FORMA QUE ES INTERPRETADO Y EJECUTADO 
 if (isset($_GET["pagina"])){
     if($_GET["pagina"]=="registro" ||
     $_GET["pagina"]=="ingreso" ||
