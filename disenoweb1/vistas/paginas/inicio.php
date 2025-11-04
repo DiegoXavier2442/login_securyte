@@ -20,7 +20,7 @@ echo '<script>window.location = "index.php?pagina=ingreso";</script>';
 // objeto que le hace una peticion al controlador 
 $usuarios = ControladorFormularios::ctrSelecionarRegistros(null,null);
 
- 
+ //
 
 ?>
 
